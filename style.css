@@ -1,0 +1,119 @@
+/*-------------------------------- 
+    flex-container properties 
+----------------------------------*/
+
+/* justify-content works for main axis and align-items works for cross axis.
+    when we declare display: flex, it on the x axis by default. If we declare flex-direction: row;
+    then x axis is the main axis. And if we set it to column, then y is the main axis. */
+
+
+/* justify-content: space-between; */
+/* justify-content: space-around; */
+/* justify-content: space-evenly; */
+/* justify-content: center; */
+/* justify-content: start; */
+/* justify-content: end; */
+/* align-items: center; */
+/* align-items: start; */
+/* align-items: end; */
+/* flex-direction: row;*/
+
+/* flex-direction: row-reverse;*/
+/*the last item will be at first and so on */
+
+/* flex-direction: column; */
+
+
+/* flex-wrap: wrap; */
+/* if a flex-item of flex-container doesn't fit in the container then 
+    will go to the next row. */
+
+.flex-container {
+    display: flex;
+    background-color: #f4f4f4f4;
+    height: 400px;
+
+
+}
+
+
+/*--------------------------------
+        flex-items properties
+--------------------------------- */
+
+/* align-self is used to place a item
+ from its current position to start, center or end. */
+
+/* align-self: flex-start;
+align-self: flex-end;
+align-self: flex-center; */
+
+
+/* order is set to place the items in order we want 
+
+
+.item:nth-of-type(1) {
+    order: 1;
+
+}
+
+.item:nth-of-type(2) {
+    order: 2;
+}
+
+.item:nth-of-type(3) {
+    order: 3;
+}
+
+*/
+
+
+
+
+/* flex grow work as a growth rate for the flex-items. It will allow the
+items two fill the whole container depending on the grow. If we make the main
+screen small, the last size of the items will be the size of flex-basis or width we set.
+It depends on the number of items and how we number the grow. Larger number of grow will
+cover larger area and smaller number of grow will cover smaller area. if we use flex-grow then
+its not necessary to declare basis or width as it will autometically set the width
+ depending on the growth rate.
+
+.item:nth-of-type(1) {
+    flex-grow: 3;
+}
+
+.item:nth-of-type(2) {
+    flex-grow: 1;
+}
+
+.item:nth-of-type(3) {
+    flex-grow: 2;
+}
+
+or, we can set the flex-grow: 1 inside the flex-items for all the boxes to take even area.
+flex-grow: 1;
+
+*/
+.item {
+    height: 100px;
+    /* flex-basis: 100px; */
+    /* its same as the width */
+    flex-grow: 1;
+    /* it will set the width of the boxes evenly and we don't need to set the basis or width */
+    background-color: blue;
+    color: white;
+    margin: 10px;
+
+    /* we can call display: flex inside a flex item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.item:nth-of-type(1) {}
+
+.item:nth-of-type(2) {}
+
+.item:nth-of-type(3) {}
